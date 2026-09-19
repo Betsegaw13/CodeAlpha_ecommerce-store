@@ -23,20 +23,15 @@ load_dotenv(BASE_DIR / ".env")
 # See https://docs.djangoproject.com/en/6.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv("django-insecure-aoarcu&)_56(u8*ibr)!n)z!x@k4khx@7wmt_-aqyx!^l0wuyx") 
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG", "False").lower() == "true"
-
 ALLOWED_HOSTS = [
-    host.strip()
-    for host in os.getenv("ALLOWED_HOSTS", "").split(",")
-    if host.strip()
+    "localhost",
+    "127.0.0.1",
+    "codealpha-ecommerce-store-3blr.onrender.com",
 ]
-
-if os.getenv("RENDER_EXTERNAL_HOSTNAME"):
-    ALLOWED_HOSTS.append(os.getenv("RENDER_EXTERNAL_HOSTNAME"))
-
 
 # Application definition
 INSTALLED_APPS = [
