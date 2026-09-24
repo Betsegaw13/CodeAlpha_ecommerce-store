@@ -146,6 +146,7 @@ STORAGES = {
 }
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
+    "https://code-alpha-ecommerce-store-pi.vercel.app",
 ]
 
 # Email
